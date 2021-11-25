@@ -157,6 +157,19 @@ class UI {
         clearCartBtn.addEventListener('click', () => {
             this.clearCart();
         });
+
+        // Cart functionality
+        cartContent.addEventListener('click', event => {
+            console.log(event.target.classList);
+            if (event.target.classList.contains('remove-item')) {
+                let removeItem = event.target;
+                let id = removeItem.dataset.id;
+                this.removeItem(id);
+                //cartContent
+                //console.log(removeItem);
+            }
+            //if (event.target.classList.contains())
+        });
     }
 
     clearCart() {
